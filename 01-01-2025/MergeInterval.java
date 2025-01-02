@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Solution {
+public class MergeInterval {
     public int[][] merge(int[][] intervals) {
         // Step 1: Sort intervals by the start time
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
@@ -17,8 +17,7 @@ public class Solution {
                 merged.add(interval);
             } else {
                 // Merge intervals by updating the end time of the last interval
-                merged.get(merged.size() - 1)[1] = 
-                    Math.max(merged.get(merged.size() - 1)[1], interval[1]);
+                merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], interval[1]);
             }
         }
 
@@ -28,9 +27,9 @@ public class Solution {
 
     // Driver method for testing
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-        int[][] result = solution.merge(intervals);
+        MergeInterval MergeInterval = new MergeInterval();
+        int[][] intervals = { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
+        int[][] result = MergeInterval.merge(intervals);
 
         // Print the merged intervals
         for (int[] interval : result) {
