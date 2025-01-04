@@ -37,8 +37,14 @@ public class binary_tree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
         TreeNode(int val, TreeNode left, TreeNode right) {
             this.val = val;
             this.left = left;
@@ -55,8 +61,8 @@ public class binary_tree {
         root.left.right = new TreeNode(5);
         root.right.right = new TreeNode(6);
 
-        Solution solution = new Solution();
-        List<List<Integer>> result = solution.levelOrder(root);
+        binary_tree binary_tree = new binary_tree();
+        List<List<Integer>> result = binary_tree.levelOrder(root);
         System.out.println(result); // Output: [[1], [2, 3], [4, 5, 6]]
     }
 }
