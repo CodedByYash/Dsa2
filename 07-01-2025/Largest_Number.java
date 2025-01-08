@@ -1,5 +1,6 @@
+import java.util.*;
+
 public class Largest_Number {
-    import java.util.*;
     public String largestNumber(int[] nums) {
         // Convert the integer array to a String array
         String[] stringNums = new String[nums.length];
