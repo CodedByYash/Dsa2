@@ -1,3 +1,7 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 class Solution {
     class TrieNode {
         Map<Character, TrieNode> children = new HashMap<>();

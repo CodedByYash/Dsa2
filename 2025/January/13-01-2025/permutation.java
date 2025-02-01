@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class permutation {
   public List<List<Integer>> permute(int[] nums) {
     List<List<Integer>> ans = new ArrayList<>();

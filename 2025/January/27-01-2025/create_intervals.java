@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class create_intervals{
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        List<int[]> result = new ArrayList<>();
+        List<int[]> result = new ArrayList<int[]>();
         int i = 0;
 
         // Add all intervals that come before the newInterval
