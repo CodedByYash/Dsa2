@@ -1,4 +1,4 @@
-class Solution {
+class decode_ways {
     public int numDecodings(String s) {
         if (s == null || s.length() == 0 || s.charAt(0) == '0') {
             return 0; // No valid decoding for empty string or starting with '0'

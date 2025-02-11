@@ -7,17 +7,17 @@ class minimum_path_sum {
 
         // Fill the first row
         for (int j = 1; j < n; j++) {
-            dp[j] = dp[j-1] + grid[0][j];
+            dp[j] = dp[j - 1] + grid[0][j];
         }
 
         // Fill the rest of the grid
         for (int i = 1; i < m; i++) {
             dp[0] += grid[i][0]; // First column
             for (int j = 1; j < n; j++) {
-                dp[j] = grid[i][j] + Math.min(dp[j], dp[j-1]);
+                dp[j] = grid[i][j] + Math.min(dp[j], dp[j - 1]);
             }
         }
 
-        return dp[n-1]; // Last element is the answer
+        return dp[n - 1]; // Last element is the answer
     }
 }

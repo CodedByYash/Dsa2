@@ -1,9 +1,10 @@
 import java.util.*;
 
-class Solution {
+class remove_invalid_parenthesis {
     public List<String> removeInvalidParentheses(String s) {
         List<String> result = new ArrayList<>();
-        if (s == null) return result;
+        if (s == null)
+            return result;
 
         Queue<String> queue = new LinkedList<>();
         Set<String> visited = new HashSet<>();
@@ -22,12 +23,14 @@ class Solution {
             }
 
             // If we found a valid string, stop generating further strings
-            if (found) continue;
+            if (found)
+                continue;
 
             // Generate all possible substrings by removing one character
             for (int i = 0; i < current.length(); i++) {
                 // Only remove parentheses
-                if (current.charAt(i) != '(' && current.charAt(i) != ')') continue;
+                if (current.charAt(i) != '(' && current.charAt(i) != ')')
+                    continue;
 
                 String next = current.substring(0, i) + current.substring(i + 1);
                 if (!visited.contains(next)) {
@@ -43,9 +46,12 @@ class Solution {
     private boolean isValid(String str) {
         int count = 0;
         for (char c : str.toCharArray()) {
-            if (c == '(') count++;
-            if (c == ')') count--;
-            if (count < 0) return false; // More closing parentheses than opening
+            if (c == '(')
+                count++;
+            if (c == ')')
+                count--;
+            if (count < 0)
+                return false; // More closing parentheses than opening
         }
         return count == 0; // Valid if no unmatched opening parentheses remain
     }

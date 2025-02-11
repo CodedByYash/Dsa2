@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class Solution {
+class word_break {
     class TrieNode {
         Map<Character, TrieNode> children = new HashMap<>();
         boolean isWord = false;
@@ -32,13 +32,16 @@ class Solution {
     }
 
     private boolean dfs(String s, int index, Map<Integer, Boolean> memo) {
-        if (index == s.length()) return true; // Successfully segmented
-        if (memo.containsKey(index)) return memo.get(index); // Return cached result
+        if (index == s.length())
+            return true; // Successfully segmented
+        if (memo.containsKey(index))
+            return memo.get(index); // Return cached result
 
         TrieNode node = root;
         for (int i = index; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (!node.children.containsKey(c)) break;
+            if (!node.children.containsKey(c))
+                break;
 
             node = node.children.get(c);
             if (node.isWord) {
