@@ -1,5 +1,5 @@
 // Remove Duplicates from Sorted Array II
-public class remove_duplicate {
+public class remove_duplicate_array {
     public int removeDuplicates(int[] nums) {
         int j = 0; // Position to place valid elements
         for (int num : nums) {
